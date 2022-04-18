@@ -1,0 +1,128 @@
+<!-- Nesta avaliação o estudante deve criar um Website client-side com HTML e CSS. O valor desta avaliação é 10 pontos.
+
+O tema do website é livre, no entanto ele deve ter os seguintes elementos:
+
+Layout
+
+- Um layout com cabeçalho, menu, conteúdo e rodapé
+- Deve ser utilizados as etiquetas HTML para layouts
+- A formatação deve ser construída com a folha de estilo (CSS)
+- O layout deve estar acessível tanto para Desktop quanto para dispositivos móveis.
+
+Menu
+- O menu deve ser construído com lista de links (etiqueta âncora)
+- Ter um submenu dropdown é um extra (sem uso de javascript, apenas CSS)
+- Cada página deve estar acessível principalmente por links neste menu.
+
+Conteúdo
+- Deve ter uma página inicial
+- Deve ter uma página com texto informacional. Deve conter pelo menos parágrafos, imagens e preferencialmente um vídeo embutido (pode ser do youtube)
+- Deve ter uma página com formulário para cadastro de algo.
+- Deve ter uma página com dados já cadastrados mostrado em tabela com ícones para alterar e remover. (Neste momento não há banco de dados)
+- Uma página para login. Apenas a interface.
+
+obs: não será permitido o uso de frameworks, neste momento. -->
+
+<!-- 
+1. Cabeçalho
+
+2. Menu
+	2.1. <ul>, <li>, <a>.
+	2.2. Dropdown ++.
+	
+3. Conteúdo
+	3.1. Inicio
+	3.2. Sobre
+		3.2.1. Parágrafo.
+		3.2.2. Imagens.
+		3.2.3. Video.
+	3.3. Cadastro
+	3.4. Consulta
+	3.5. Login
+	
+4. Rodapé 
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/style.css" />
+    <title>CyberSystem</title>
+  </head>
+  <body class="back-lightgray">
+    <!-- 1. Cabeçalho -->
+    <header>
+      <a class="logo" href="/index.html">
+        <img src="/img/cyber.png" alt="Logo" />
+        <h1>CyberSystem</h1>
+      </a>
+      <!-- 2. Menu -->
+      <nav>
+        <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <label class="menu-icon" for="menu-btn"
+          ><span class="navicon"></span
+        ></label>
+        <ul class="menu">
+          <li><a href="/index.html">INICIO</a></li>
+          <li><a href="/pages/sobre.html">SOBRE</a></li>
+          <li><a class="on" href="/pages/cadastro.html">CADASTRO</a></li>
+          <li><a href="/pages/consulta.html">CONSULTA</a></li>
+          <li><a href="/pages/login.html">LOGIN</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- 3. Conteúdo -->
+    <section class="my-5">
+      <div class="tx-center">
+        <h1>CADASTRO</h1>
+        <p class="mt-1">
+          Esta pagina é destinada ao cadastro de novas requisições para
+          associação.
+        </p>
+      </div>
+      <div class="justify-content-center my-1">
+        <form class="flex-column w-40 form-cadastro">
+          <label for="nome">Nome</label>
+          <input type="text" name="nome" id="nome" />
+          <label for="nome">Matricula</label>
+          <input type="text" name="matricula" id="matricula" />
+          <label for="nome">Data de Nasc.</label>
+          <input type="date" name="nasc" id="nasc" />
+          <label for="turma">Turma</label>
+          <select name="turma" id="turma">
+            <option value="2016/1">2016/1</option>
+            <option class="back-gray" value="2016/2">2016/2</option>
+            <option value="2017/1">2017/1</option>
+            <option class="back-gray" value="2017/2">2017/2</option>
+            <option value="2018/1">2018/1</option>
+            <option class="back-gray" value="2018/2">2018/2</option>
+            <option value="2019/1">2019/1</option>
+            <option class="back-gray" value="2019/2">2019/2</option>
+            <option value="2020/1">2020/1</option>
+            <option class="back-gray" value="2020/2">2020/2</option>
+            <option value="2021/1">2021/1</option>
+            <option class="back-gray" value="2021/2">2021/2</option>
+            <option value="2022/1">2022/1</option>
+          </select>
+          <label for="email">E-mail</label>
+          <input type="email" name="email" id="email" />
+          <button type="submit">ENVIAR</button>
+        </form>
+      </div>
+    </section>
+    <!-- 4. Rodapé -->
+    <footer class="back-white d-flex justify-content-center align-items-center">
+      <p class="tx-center">
+        &copy; 2022 CyberSystem | Todos os direitos reservados | Developed by
+        <a href="https://thiagodebugs.github.io/link-bio/" target="_blank"
+          >Thiago Mendonça</a
+        >
+      </p>
+    </footer>
+    <script src="/script.js"></script>
+  </body>
+</html>
