@@ -9,7 +9,7 @@
 
 a {
   color: black;
-  transition: 0.3s;
+  transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 header {
@@ -26,13 +26,18 @@ header .menu a {
   display: block;
   padding: 8px 5px;
   margin: 5px 30px;
+  border-bottom: 2px solid transparent;
 }
 
 header .menu a:hover,
 footer a:hover,
-.on {
+header .menu .on {
   color: cornflowerblue;
-  border-bottom: 1px solid cornflowerblue;
+  border-color: cornflowerblue;
+}
+
+header .menu .on {
+  border-bottom: 2px solid cornflowerblue !important;
 }
 
 header .logo {
@@ -311,6 +316,10 @@ footer {
 
 .tx-center {
   text-align: center;
+}
+
+.tx-justify {
+  text-align: justify;
 }
 
 .yt-video {
