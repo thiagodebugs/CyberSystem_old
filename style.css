@@ -15,10 +15,7 @@ a {
 header {
   background-color: #fff;
   box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  width: 100vw;
 }
 
 header ul {
@@ -27,8 +24,8 @@ header ul {
 
 header .menu a {
   display: block;
-  padding: 5px 5px;
-  margin: 2px;
+  padding: 8px 5px;
+  margin: 5px 30px;
 }
 
 header .menu a:hover,
@@ -59,6 +56,9 @@ header .menu-icon {
   cursor: pointer;
   padding: 28px 20px;
   user-select: none;
+  position: absolute;
+  top: 12px;
+  right: 25px;
 }
 
 header .menu-icon .navicon {
@@ -94,7 +94,7 @@ header .menu-btn {
 }
 
 header .menu-btn:checked ~ .menu {
-  max-height: 240px;
+  max-height: none;
 }
 
 header .menu-btn:checked ~ .menu-icon .navicon {
@@ -358,6 +358,33 @@ footer {
     width: 95vw;
     height: 30vh;
   }
+  header .logo {
+    font-size: 10pt;
+  }
+  header .logo img {
+    max-width: 60px;
+  }
+  header .menu-icon {
+    top: 3px;
+    right: 10px;
+  }
+
+  .form-login img {
+    display: none;
+  }
+  .form-login {
+    padding: 30px 15px;
+  }
+}
+
+@media (max-width: 312px) {
+  header .logo h1 {
+    visibility: hidden;
+  }
+  .form-login input,
+  .form-login button {
+    font-size: 12pt;
+  }
 }
 
 @media (min-width: 48em) {
@@ -372,6 +399,7 @@ footer {
   }
   header li a {
     padding: 20px 30px;
+    margin: 5px !important;
   }
   header .menu {
     clear: none;
